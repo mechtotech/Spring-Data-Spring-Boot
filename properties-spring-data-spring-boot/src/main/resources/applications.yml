@@ -1,0 +1,30 @@
+management:
+  endpoints:
+    web:
+      exposure:
+        include: mappings
+        
+welcome:
+  message: 'Welcome! Find Your Favourite Travel Destinations! '
+        
+server:
+  port: 8081
+  
+spring:
+  application:
+    name: Travel Destinations Service
+ 
+  datasource:
+    driver-class-name: org.h2.Driver
+    password: 
+    url: jdbc:h2:mem:testdb
+    username: sa
+    
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.H2Dialect
+    show-sql: true
+    
